@@ -1,0 +1,74 @@
+import random # como la computadora debe elegir una de las 3 opciones al azar, se importa random
+print("INSTRUCCIONES")
+print("solo se debe digitar 'piedra', 'papel' y 'tijera' en minúsculas")
+print("cada uno tendrá 3 vida, pierde al primero que se le acaben todas")
+
+vida_usuario = 3 # Número de veces que el usuario tiene para no fallar, irá disminuyendo por cada pérdida
+vida_computadora = 3 # Número de veces que la computadora tiene para no fallar, irá disminuyendo por cada pérdida
+
+empate = ("Empate, siga intentando") #texto que se mostrará en caso de empate
+gana_pc = ("Gana la computadora") #texto que se mostrará cuando gane la pc
+gana_usuario = ("Gana usuario") #texto que se mostrará cuando gane el usuario
+
+opciones = ["piedra", "papel", "tijera"] # lista de las 3 opciones a escoger por la computadora
+
+while(vida_usuario > 0 and vida_computadora > 0):# se usa el WHILE, ya que el juego debe acabar cuando alguno llegue a cero vidas
+    
+    while True:
+        respuesta_usuario = input("Elija una de las opciones anteriores: ") #respuesta del usuario a digitar
+        valido = False
+        
+        for validador in opciones:
+            if (validador == respuesta_usuario):
+                valido = True
+                break
+
+        if (valido != True):
+            print("opción no válida, vuelva a intentarlo")
+        else:
+            break
+        
+    respuesta_computadora = random.choice(opciones) #opción al azar de la computadora
+
+    print("----------")
+
+    print("computadora ha escogido: ", respuesta_computadora)
+    
+    #como existen 3 variantes, se ha visto mas conveniente crear 3 if principales con sus respectivas variantes
+    if (respuesta_usuario == "tijera"): #cuando usuario escoja tijera, se producirá un resultado según opción de la computadora
+        if respuesta_computadora == "tijera":
+            print(empate) #al ser ambas respuestas iguales, se produce un empate
+        elif (respuesta_computadora == "piedra"):
+            vida_usuario -= 1 #según la tabla de resultados, al ganar la computadora se resta -1 la vida del usuario
+            print(gana_pc)
+        elif (respuesta_computadora == "papel"):
+            vida_computadora -= 1 #según la tabla de resultados, al ganar el usuario se resta -1 la vida de la computadora
+            print(gana_usuario)
+
+    elif (respuesta_usuario == "piedra"): #cuando usuario escoja piedra, se producirá un resultado según opción de la computadora
+        if respuesta_computadora == "piedra":
+            print(empate)
+        elif (respuesta_computadora == "papel"):
+            vida_usuario -= 1
+            print(gana_pc)
+        elif (respuesta_computadora == "tijera"):
+            vida_computadora -= 1
+            print(gana_usuario)
+
+    elif (respuesta_usuario == "papel"): #cuando usuario escoja papel, se producirá un resultado según opción de la computadora
+        if respuesta_computadora == "papel":
+            print(empate)
+        elif (respuesta_computadora == "tijera"):
+            vida_usuario -= 1
+            print(gana_pc)
+        elif (respuesta_computadora == "piedra"):
+            vida_computadora -= 1
+            print(gana_usuario)
+    else: 
+        break
+    print("vida usuario: ",vida_usuario," - vida computadora: ",vida_computadora) #texto resumen de las vidas actuales después de cada ronda
+    print("----------")
+
+if (vida_computadora == 0): #cuando la computadora llegue a 0 vidas, el usuario es el ganador, sino la computodra será la ganadora
+    print("Felicidades, el usuario es el ganador")
+else: print ("Ha ganado la computora, más suerte la próxima vez")
