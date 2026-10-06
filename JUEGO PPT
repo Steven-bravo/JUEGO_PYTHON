@@ -1,7 +1,4 @@
 import random # como la computadora debe elegir una de las 3 opciones al azar, se importa random
-print("INSTRUCCIONES")
-print("solo se debe digitar 'piedra', 'papel' y 'tijera' en minúsculas")
-print("cada uno tendrá 3 vida, pierde al primero que se le acaben todas")
 
 vida_usuario = 3 # Número de veces que el usuario tiene para no fallar, irá disminuyendo por cada pérdida
 vida_computadora = 3 # Número de veces que la computadora tiene para no fallar, irá disminuyendo por cada pérdida
@@ -11,6 +8,10 @@ gana_pc = ("Gana la computadora") #texto que se mostrará cuando gane la pc
 gana_usuario = ("Gana usuario") #texto que se mostrará cuando gane el usuario
 
 opciones = ["piedra", "papel", "tijera"] # lista de las 3 opciones a escoger por la computadora
+
+print("INSTRUCCIONES")
+print("solo se debe digitar 'piedra', 'papel' y 'tijera' en minúsculas")
+print("cada uno tendrá 3 vida, pierde al primero que se le acaben todas")
 
 while(vida_usuario > 0 and vida_computadora > 0):# se usa el WHILE, ya que el juego debe acabar cuando alguno llegue a cero vidas
     
