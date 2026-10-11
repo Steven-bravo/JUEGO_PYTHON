@@ -1,7 +1,9 @@
 # 🎮 Juego Piedra, Papel o Tijera - Proyecto Integrador 
 Bienvenido al repositorio del **Juego de Piedra, Papel o Tijera** 
 --- 
-## 🎯 Objetivo del Sistema El objetivo de este programa es proporcionar una plataforma interactiva y entretenida en Python que permita a un usuario enfrentarse contra la computadora en el clásico juego de "Piedra, Papel o Tijera", aplicando controles de vidas y validaciones de datos para garantizar una ejecución fluida y libre de errores de entrada. 
+## 🎯 Objetivo del Sistema 
+
+El objetivo de este programa es proporcionar una plataforma interactiva y entretenida en Python que permita a un usuario enfrentarse contra la computadora en el clásico juego de "Piedra, Papel o Tijera", aplicando controles de vidas y validaciones de datos para garantizar una ejecución fluida y libre de errores de entrada. 
 --- 
 ## 🚀 Funcionalidades Principales 
 - 👤 **Personalización de Usuario:** Registro del nombre del jugador al iniciar la partida. 
