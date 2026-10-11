@@ -1,4 +1,4 @@
-# 🎮 Juego Piedra, Papel o Tijera - Proyecto Integrador 
+# 🎮 Juego Piedra, Papel o Tijera
 Bienvenido al repositorio del **Juego de Piedra, Papel o Tijera** 
 --- 
 ## 🎯 Objetivo del Sistema 
